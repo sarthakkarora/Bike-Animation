@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bike Animation</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <style>
+    body {
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+    
+    .container {
+      overflow: hidden;
+    }
+    
+    .infinite-scrolling {
+      position: relative;
+      background: url('road.jpg') repeat-x;
+      height: 404px;
+      width: 2805px;
+      animation: slide 3s linear infinite;
+    }
+    
+    @keyframes slide {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-935px, 0, 0);
+      }
+    }
+    
+    img {
+      position: absolute;
+      top: 260px;
+      left: 150px;
+      width: 80px;
+    }
+    
+    img:hover {
+      transform: rotate(-30deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="infinite-scrolling"></div>
+    <img src="bike.png" />
+  </div>
+</body>
+</html>
